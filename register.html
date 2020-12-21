@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-->
+Project Name: Milesstone 1
+Project Version:  1
+Module Name: Registration Page
+Module Version: 1
+Programmer's Name: Shannon Reynolds
+Date: 12/21/20
+Synopsis: This page is the HTML for the Registration for my Blog
+-->
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Form</title>
+</head>
+<body>
+     <form action="pageHandler.php" method="post"><!-- >This tells the web which page to use to process the information added into the form -->
+     <!-- >Below are the form elements that are needed for registration -->
+       <label for="FirstName">First name:</label><br>
+       <input type="text" id="FirstName" name="FirstName"><br>
+       <label for="LastName">Last name:</label><br>
+       <input type="text" id="LastName" name="LastName"><br>
+       <label for="DateofBirth">Date of Birth:</label><br>
+       <input type="date" id="DateofBirth" name="DateofBirth"><br>
+       <label for="Email">Email:</label><br>
+       <input type="email" id="Email" name="Email"><br>
+       <label for="Password">Password:</label><br>
+       <Input type="password" id="Password" name="Password"><br>
+       <label for="Comments">Comments:</label><br>
+       <input type="text" size="120" id="Comments" name="Comments"><br><br>
+       <input type="submit" value="Submit">
+     </form>
+     
+</body>
+</html>
