@@ -8,10 +8,11 @@ Programmer's Name: Shannon Reynolds
 Date: 12/21/20
 Synopsis: This page is the HTML for the Registration for my Blog
   */
-$servername = "localhost";//Says where the server is
-$username = "root";//says what the username for the server is
-$password = "root";//Says what the password for the server is
-$dbname = "activity1";//Gives the Database name
+$servername = "ec2-34-194-198-238.compute-1.amazonaws.com";//Says where the server is
+$username = "tvbjercpxjlgnf";//says what the username for the server is
+$password = "4f42ac900d153f551576d5733621d3f16527be1c7d8d6a009d70a25a31c27ca3";//Says what the password for the server is
+$dbname = "dcbkvimcgt9442";//Gives the Database name
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
