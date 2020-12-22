@@ -29,8 +29,8 @@ $Email=$_POST['Email'];
 $password=$_POST['password'];
 $Comments=$_POST['Comments'];
 
-$sql = "INSERT INTO users (First_Name, Last_Name, DateofBirth,Email,password,Comments)
-VALUES ('$First_Name','$Last_Name','$DateofBirth','$Email','$password','$Comments')";
+$sql = "INSERT INTO users (password, LastName, FirstName, Email, DateofBirth, Comments)
+VALUES ('$password','$Last_Name','$FirstName','$Email','$DateofBirth','$Comments')";
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
