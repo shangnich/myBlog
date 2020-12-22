@@ -22,15 +22,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 // Data from form
-$First_Name=$_POST['FirstName'];
-$Last_Name=$_POST['LastName'];
-$DateofBirth=$_POST['DateofBirth'];
-$Email=$_POST['Email'];
-$password=$_POST['password'];
-$Comments=$_POST['Comments'];
+$First_Name=$_POST[FirstName];
+$Last_Name=$_POST[LastName];
+$DateofBirth=$_POST[DateofBirth];
+$Email=$_POST[Email];
+$password=$_POST[password];
+$Comments=$_POST[Comments];
 
 $sql = "INSERT INTO users (password, LastName, FirstName, Email, DateofBirth, Comments)
-VALUES ('$password','$Last_Name','$FirstName','$Email','$DateofBirth','$Comments')";
+VALUES ($password,$Last_Name,$FirstName,$Email,$DateofBirth,$Comments)";
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
