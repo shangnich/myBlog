@@ -26,7 +26,7 @@ $First_Name=$_POST[FirstName];
 $Last_Name=$_POST[LastName];
 $DateofBirth=$_POST[DateofBirth];
 $Email=$_POST[Email];
-$password=$_POST[password];
+$Password=$_POST[Password];
 $Comments=$_POST[Comments];
 
 $sql = "INSERT INTO users (password, LastName, FirstName, Email, DateofBirth, Comments)
