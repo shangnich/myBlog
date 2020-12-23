@@ -19,25 +19,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}
-// Data from form
-$First_Name=$_POST['FirstName'];
-$Last_Name=$_POST['LastName'];
-$DateofBirth=$_POST['DateofBirth'];
-$Email=$_POST['Email'];
-$password=$_POST['password'];
-$Comments=$_POST['Comments'];
-
-$sql = "INSERT INTO users (First_Name, Last_Name, DateofBirth,Email,password,Comments)
-VALUES ('$First_Name','$Last_Name','$DateofBirth','$Email','$password','$Comments')";
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
-*/
+}*/
 $connectstr_dbhost = '';
 $connectstr_dbname = '';
 $connectstr_dbusername = '';
@@ -66,4 +48,23 @@ define('DB_PASSWORD', $connectstr_dbpassword);
 
 /** MySQL hostname : this contains the port number in this format host:port . Port is not 3306 when using this feature*/
 define('DB_HOST', $connectstr_dbhost);
+// Data from form
+$First_Name=$_POST['FirstName'];
+$Last_Name=$_POST['LastName'];
+$DateofBirth=$_POST['DateofBirth'];
+$Email=$_POST['Email'];
+$password=$_POST['password'];
+$Comments=$_POST['Comments'];
+
+$sql = "INSERT INTO users (First_Name, Last_Name, DateofBirth,Email,password,Comments)
+VALUES ('$First_Name','$Last_Name','$DateofBirth','$Email','$password','$Comments')";
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+
+
 ?> 
