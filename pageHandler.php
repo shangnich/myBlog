@@ -36,7 +36,6 @@ if (!$link) {
 echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
 echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
 
-mysqli_close($link);
 // Data from form
 $First_Name=$_POST[FirstName];
 $Last_Name=$_POST[LastName];
@@ -53,5 +52,6 @@ if ($conn->query($sql) === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-$conn->close();
+
+mysqli_close($link);
 ?> 
