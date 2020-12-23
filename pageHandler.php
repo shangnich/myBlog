@@ -7,10 +7,10 @@ Module Version: 1
 Programmer's Name: Shannon Reynolds
 Date: 12/21/20
 Synopsis: This page is the HTML for the Registration for my Blog
-  
-$servername = "127.0.0.1:56376";//Says where the server is
-$username = "shangreyn";//says what the username for the server is
-$password = "wH49t3XNwjNwQGpc";//Says what the password for the server is
+  */
+$servername = "localhost";//Says where the server is
+$username = "root";//says what the username for the server is
+$password = "root";//Says what the password for the server is
 $dbname = "activity1";//Gives the Database name
 
 // Create connection
@@ -19,35 +19,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}*/
-$connectstr_dbhost = '';
-$connectstr_dbname = '';
-$connectstr_dbusername = '';
-$connectstr_dbpassword = '';
-
-foreach ($_SERVER as $key => $value) {
-    if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
-        continue;
-    }
-    
-    $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
 }
-
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', $connectstr_dbname);
-
-/** MySQL database username */
-define('DB_USER', $connectstr_dbusername);
-
-/** MySQL database password */
-define('DB_PASSWORD', $connectstr_dbpassword);
-
-/** MySQL hostname : this contains the port number in this format host:port . Port is not 3306 when using this feature*/
-define('DB_HOST', $connectstr_dbhost);
 // Data from form
 $First_Name=$_POST['FirstName'];
 $Last_Name=$_POST['LastName'];
@@ -65,6 +37,4 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-
-
 ?> 
