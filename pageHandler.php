@@ -8,9 +8,9 @@ Programmer's Name: Shannon Reynolds
 Date: 12/21/20
 Synopsis: This page is the HTML for the Registration for my Blog
   */
-$servername = "localhostdb";//Says where the server is
+$servername = "127.0.0.1:56376 via TCP/IP";//Says where the server is
 $username = "shangreyn";//says what the username for the server is
-$password = "trythis1today";//Says what the password for the server is
+$password = "wH49t3XNwjNwQGpc";//Says what the password for the server is
 $dbname = "activity1";//Gives the Database name
 
 // Create connection
